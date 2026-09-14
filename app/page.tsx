@@ -850,7 +850,7 @@ export default function Home() {
             <div className="mt-6 grid gap-5 md:grid-cols-2">
               {assignmentRequirements.map(([number, title, description, checklist]) => (
                 <article
-                  key={number}
+                  key={String(number)}
                   className="rounded-3xl border border-slate-800 bg-slate-900 p-6"
                 >
                   <div className="text-sm font-bold tracking-widest text-amber-400">
@@ -1053,7 +1053,7 @@ export default function Home() {
             <div className="mt-6 grid gap-5 md:grid-cols-2">
               {viewingChecklist.map(([title, questions]) => (
                 <article
-                  key={title}
+                 key={String(title)}
                   className="rounded-3xl border border-slate-800 bg-slate-900 p-6"
                 >
                   <h3 className="text-xl font-bold text-amber-300">{title}</h3>
